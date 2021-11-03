@@ -5,10 +5,11 @@
 }
 body{
     background-color: rgba(216, 219, 214, 1);
+    font-family: 'Roboto', sans-serif;
 }
 .green{
     width: 100%;
-    height: 90px;
+    height: 107px;
     background-color: rgba(0, 150, 136, 1);
 }
 .position {
@@ -25,13 +26,59 @@ body{
 }
 .chatContact{
     width: 35%;
-    background: aliceblue;
+    display: flex;
+    flex-direction: column;
 }
 .chatSelected{
     width: 65%;
     background-color:blue;
 }
+
+/*box contatti*/
+/*profilo*/
 .user {
-    background-color: blueviolet;
-    height: 76px;
+    background-color: rgba(234, 234, 234, 1);
+    height: 90px;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    justify-content: space-between;
+}
+.userImg{
+    width: 50px;
+    border-radius: 28px;
+}
+.profilo{
+    width: 50%;
+}
+.icons{
+    width: 27%;
+    justify-content: space-between;
+}
+.icons i {
+    color: rgba(177, 177, 177, 1);
+    font-size: 25px;
+}
+.flex {
+    display: flex;
+    align-items: center;
+}
+/*campanella notifiche*/
+.notifications {
+    height: 100px;
+    background-color: rgba(142, 218, 252, 1);
+   
+}
+.bell{
+    width: 15%;
+    color: rgba(142, 218, 252, 1);
+    background-color: rgba(242, 251, 255, 1);
+    text-align: center;
+    font-size: 23px;
+    padding: 1rem 1rem;
+    border-radius: 32px;
+    margin-left: 2rem;
+}
+.text {
+    margin-left: 10px;
 }
