@@ -30,7 +30,7 @@ body{
 }
 .chatSelected{
     width: 65%;
-    background-color:blue;
+    background-image: url("/milestone-1/asset/img/mine.jpg");
 }
 
 /*box contatti*/
@@ -119,4 +119,24 @@ body{
     padding-bottom: 2rem;
     margin-left: 1.5rem;
     font-size: 20px;
+}
+
+
+/*chat seleziopnata*/
+
+.userSelected{
+    height: 90px;
+    background-color:rgba(234, 234, 234, 1) ;
+    border-left: 1px solid rgba(214, 214, 214, 1);
+    padding: 1rem;
+    justify-content: space-between;
+}
+.avatarSelected {
+    width: 50%;
+}
+.nameSelected{
+    margin-left: 1rem;
+}
+.icon{
+    width: 15%;
 }
