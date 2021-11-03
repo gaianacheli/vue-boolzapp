@@ -16,7 +16,7 @@ body{
     position: relative;
 }
 .boxChat {
-    background-color: aqua;
+    background-color:rgba(250, 250, 250, 1);
     height: 560px;
     width: 1222px;
     position: absolute;
@@ -81,4 +81,21 @@ body{
 }
 .text {
     margin-left: 10px;
+}
+/*search*/
+.search{
+    background-color: rgba(255, 255, 255, 1);
+    height: 40px;
+    margin: 10px;
+    padding: 10px;
+
+}
+.research{
+    width: 200px;
+    border: none;
+    color: rgba(117, 121, 139, 1);
+}
+.fa-search{
+    margin-right: 10px;
+    color: rgba(117, 121, 139, 1);
 }
