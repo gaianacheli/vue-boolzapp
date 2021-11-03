@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(216, 219, 214, 1);
+}
+.green{
+    width: 100%;
+    height: 90px;
+    background-color: rgba(0, 150, 136, 1);
+}
+.position {
+    position: relative;
+}
+.boxChat {
+    background-color: aqua;
+    height: 560px;
+    width: 998px;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+}
