@@ -158,9 +158,35 @@ body{
     border: none;
     padding: 1rem;
     color: rgba(117, 117, 117, 1);
+    border-radius: 6px;
 }
 .iconBarra{
     color: rgba(107, 115, 118, 1);
     font-size: 25px;
+
+}
+.messageReceived{
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    margin: 2rem;
+    border-radius: 10px;
+}
+.message {
+    
+    padding: 10px;
+}
+.time{
+    font-size: 10px;
+    float: right;
+    margin-right: 5px;
+    color: rgba(182, 185, 202, 1);
+    
+}
+.messageEnvoy {
+    float: right;
+    background-color: rgba(213, 249, 186, 1);
+    border-radius: 10px;
+    margin-right: 2rem;
 
 }
