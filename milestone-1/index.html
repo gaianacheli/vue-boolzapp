@@ -28,7 +28,6 @@
                             <i class="fas fa-comment-alt"></i>
                             <i class="fas fa-ellipsis-v"></i>
                         </div>
-                
                     </div>
                     <div class="notifications flex">
                         <div class="bell">
@@ -42,6 +41,14 @@
                     <div class="search flex">
                         <i class="fas fa-search"></i>
                         <input type="search" class="research" value="Cerca o inizia una nuova chat">
+                    </div>
+                    <div class="chatWithContacts">
+                        <div class="chatWithContact" v-for="user in contacts">
+                            <img class="avatar" :src="user.avatar" alt="">
+                            <p class="userName">{{user.name}}</p>
+
+                        </div>
+
                     </div>
 
                 </div>
