@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <title>Boolzapp</title>
+</head>
+<body>
+    <div id="app">
+        <div class="container position ">
+            <div class="green">
+            </div>
+            <!----profilo user-->
+            <div class="boxChat">
+                <div class="chatContact">
+                    <div class="user">
+                        <div class="profilo flex">
+                            <img class="userImg" src="./asset/img/avatar_io.jpg" alt="">
+                            <p style="font-size: 20px;">Nome Utente</p>  
+                        </div>
+                        <div class="icons flex">
+                            <i class="fas fa-circle-notch"></i>
+                            <i class="fas fa-comment-alt"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                    <!---notifiche-->
+                    <div class="notifications flex">
+                        <div class="bell">
+                            <i class="fas fa-bell-slash"></i>
+                        </div>
+                        <div class="text">
+                            <p style="font-size: 18px; margin-bottom: 8px;">Ricevi notifiche di nuovi messaggi</p>
+                            <a style="color:rgba(93, 116, 133, 1);font-size: 16px;" href="">Attiva notifiche desktop</a>
+                        </div>
+                    </div>
+                    <!---search-->
+                    <div class="search flex">
+                        <i class="fas fa-search"></i>
+                        <input type="search" class="research" value="Cerca o inizia una nuova chat">
+                    </div>
+                    <!---lista contatti-->
+                    <div class="chatWithContacts">
+                        <div class="chatWithContact" v-for="user in contacts">
+                            <img class="avatar" :src="user.avatar" alt="">
+                            <p class="userName">{{user.name}}</p>
+                        </div>
+                    </div>
+                </div>
+                <!--chat selezionata-->
+                <div class="chatSelected position">
+                    <div class="userSelected flex">
+                        <div class="user_account flex">
+                            <div class="imgSelected">
+                            <img class="userImg" src="./asset/img/avatar_1.jpg" alt="">
+                            </div>
+                            <div class="nameSelected">
+                             <p style="font-size: 20px;" >Michele</p>
+                             <p style="color:rgba(107, 115, 118, 1) ;">Ultimo accesso oggi alle</p>
+                             </div>
+                        </div>
+                        <div class="icons icon flex">
+                            <i class="fas fa-search"></i>
+                            <i class="fas fa-paperclip"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                       </div>
+                    </div>
+                    <!--barra text-->
+                    <div class="textBarra">
+                        <i class="far fa-smile iconBarra"></i>
+                        <input class="barraMessage" type="text" value="Scrivi un messaggio">
+                        <i class="fas fa-microphone iconBarra"></i>
+                    </div>
+                    <!--message-->
+                    <div class="messages" v-for="message in contacts[counter].messages">
+                        <div class="messageReceived" v-if="message.status == 'received'">
+                            <p class="message">{{message.text}}</p>
+                            <p class="time">{{message.date}}</p>
+                         </div>  
+                         <div class="messageEnvoy" v-else>
+                            <p class="message">{{message.text}}</p>
+                            <p class="time">{{message.date}}</p>
+                         
+                        </div>
+                    </div>
+                   
+                    
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="./asset/js/app.js"></script>
+</body>
+</html>
