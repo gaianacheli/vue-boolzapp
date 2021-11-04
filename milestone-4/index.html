@@ -43,11 +43,11 @@
                     <!---search-->
                     <div class="search flex">
                         <i class="fas fa-search"></i>
-                        <input type="search" class="research" value="Cerca o inizia una nuova chat">
+                        <input type="search" v-model="search" class="research" placeholder="Cerca o inizia una nuova chat">
                     </div>
                     <!---lista contatti-->
                     <div class="chatWithContacts">
-                        <div class="chatWithContact" @click="showChat(index)" v-for="(contact, index) in contacts"
+                        <div class="chatWithContact" @click="showChat(index)" v-for="(contact, index) in  filterSearch"
                          :class=" index === counter ? 'active' : '' ">
                             <img class="avatar" :src="contact.avatar" alt="">
                             <p class="userName">{{contact.name}}</p>

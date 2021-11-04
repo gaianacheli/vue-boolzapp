@@ -89,6 +89,7 @@ const app = new Vue ({
             ],
             counter: 0,
             newMessages: '',
+            search: '',
             
     },
     methods: {
@@ -113,7 +114,15 @@ const app = new Vue ({
          
             this.newMessages=''
         },
+    },
+    computed: {
+        filterSearch (){
+            return this.contacts.filter((contacts) => {
+                return contacts.name.toLowerCase().includes(this.search.toLowerCase());
+            });
+        }
+        }
 
 
-    }
+    
 })
