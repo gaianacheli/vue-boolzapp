@@ -1,7 +1,6 @@
 const app = new Vue ({
     el:"#app",
     data: {
-        counter: 0,
         contacts: [
             {
                 name: 'Michele',
@@ -85,13 +84,36 @@ const app = new Vue ({
                                 status: 'received'
                             }
                           ],
+                         
             },
             ],
+            counter: 0,
+            newMessages: '',
+            
     },
     methods: {
         showChat(index) {
             this.counter = index
-        }
+        },
+        addMessage(){
+            if (this.newMessages != '')
+            this.contacts[this.counter].messages.push({
+                date:new Date().toLocaleString(),
+                text: this.newMessages,
+                status: 'sent'
+            })  
+            setTimeout(() =>{
+                this.contacts[this.counter].messages.push({
+                 date: new Date().toLocaleString(),
+                 text: 'ok',
+                 status: 'received',
+                });
+             
+            },1000) 
+         
+            this.newMessages=''
+        },
+
 
     }
 })

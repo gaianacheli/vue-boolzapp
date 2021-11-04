@@ -30,6 +30,7 @@ body{
 }
 .chatSelected{
     width: 65%;
+    overflow-y: auto;
     background-image: url("/milestone-1/asset/img/mine.jpg");
 }
 .active {
@@ -193,4 +194,9 @@ body{
     border-radius: 10px;
     margin: 1rem;
 
+}
+
+.boxmessages{
+    height: 650px;
+    overflow-y: scroll;
 }

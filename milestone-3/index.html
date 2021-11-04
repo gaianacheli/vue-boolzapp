@@ -75,10 +75,11 @@
                     <!--barra text-->
                     <div class="textBarra">
                         <i class="far fa-smile iconBarra"></i>
-                        <input class="barraMessage" type="text" value="Scrivi un messaggio">
+                        <input class="barraMessage" type="text" placeholder="Cerca o inizia una nuova chat" v-model="newMessages" @keyup.enter="addMessage()">
                         <i class="fas fa-microphone iconBarra"></i>
                     </div>
                     <!--message-->
+                    <div class="boxmessages">
                     <div class="messages" v-for="message in contacts[counter].messages">
                         <div class="messageReceived" v-if="message.status == 'received'">
                             <p class="message">{{message.text}}</p>
@@ -88,9 +89,9 @@
                             <p class="message">{{message.text}}</p>
                             <p class="time">{{message.date}}</p>
                          
-                        </div>
+                         </div>
                     </div>
-                   
+                   </div>
                     
 
                 </div>
