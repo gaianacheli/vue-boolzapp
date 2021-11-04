@@ -47,9 +47,10 @@
                     </div>
                     <!---lista contatti-->
                     <div class="chatWithContacts">
-                        <div class="chatWithContact" v-for="user in contacts">
-                            <img class="avatar" :src="user.avatar" alt="">
-                            <p class="userName">{{user.name}}</p>
+                        <div class="chatWithContact" @click="showChat(index)" v-for="(contact, index) in contacts"
+                         :class=" index === counter ? 'active' : '' ">
+                            <img class="avatar" :src="contact.avatar" alt="">
+                            <p class="userName">{{contact.name}}</p>
                         </div>
                     </div>
                 </div>
@@ -58,10 +59,10 @@
                     <div class="userSelected flex">
                         <div class="user_account flex">
                             <div class="imgSelected">
-                            <img class="userImg" src="./asset/img/avatar_1.jpg" alt="">
+                            <img class="userImg" :src="contacts[counter].avatar" alt="">
                             </div>
                             <div class="nameSelected">
-                             <p style="font-size: 20px;" >Michele</p>
+                             <p style="font-size: 20px;" >{{contacts[counter].name}}</p>
                              <p style="color:rgba(107, 115, 118, 1) ;">Ultimo accesso oggi alle</p>
                              </div>
                         </div>

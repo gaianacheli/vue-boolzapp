@@ -86,6 +86,12 @@ const app = new Vue ({
                             }
                           ],
             },
-            ]
+            ],
+    },
+    methods: {
+        showChat(index) {
+            this.counter = index
+        }
+
     }
 })
