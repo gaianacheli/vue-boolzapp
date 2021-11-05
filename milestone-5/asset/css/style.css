@@ -184,6 +184,7 @@ body{
 }
 .messages {
     display: flow-root;
+    position: relative;
 }
 .time{
     font-size: 10px;
@@ -217,14 +218,31 @@ body{
     min-width: 185px;  
 }
 
-.downContent a {
+.info {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
+
 #myDropdown {
     display: none;  
 }
+.infoReceived{
+    position: absolute;
+    top: 43%;
+    background-color: white;
+    min-width: 185px;  
+
+}
+.infoSend {
+    position: absolute;
+    right: 10%;
+    top: 28%;
+    z-index: 1;
+    background-color: white;
+    min-width: 185px; 
+}
+
 
 
