@@ -20,7 +20,7 @@ body{
     width: 1222px;
     position: absolute;
     top: 15%;
-    left: 7%;
+    left: 3%;
     display: flex;
 }
 .chatContact{
@@ -174,8 +174,7 @@ body{
 
 }
 .messageReceived{
-    width: 150px;
-  
+    float: left;
     background-color: white;
     margin: 2rem;
     border-radius: 10px;
@@ -188,23 +187,44 @@ body{
 }
 .time{
     font-size: 10px;
+    float: right;
     margin-left: 46px;
     color: rgba(182, 185, 202, 1);
     align-self: flex-end; 
 }
 .messageEnvoy {
-    display: flex;
     float: right;
+    width: 200px;
     background-color: rgba(213, 249, 186, 1);
     border-radius: 10px;
     margin: 1rem;
+    position: relative;
 
 }
-.dropdown {
-    display: flex;
-    justify-content: end;
+.dropdown{
+    float: right;
 }
+
 .down {
+    float: right;
     margin-right: 10px;
+    color: rgba(182, 185, 187, 1);
+   
 }
+.downContent{
+    position: absolute;  
+    background-color: white;  
+    min-width: 185px;  
+}
+
+.downContent a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+#myDropdown {
+    display: none;  
+}
+
 

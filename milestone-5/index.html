@@ -83,7 +83,11 @@
                     <div class="messages" v-for="message in contacts[counter].messages">
                         <div :class="message.status == 'received' ? 'messageReceived' : 'messageEnvoy'">
                             <div class="dropdown">
-                                <i class="down  fas fa-chevron-down"></i>
+                                <i class="down  fas fa-chevron-down" @click='clickDown(message.id)'></i>
+                               <div v-bind:id="'myDropdown'+ message.id" class="downContent">
+                                   <a href="#">info</a>
+                                   <a href="#">Delete message</a>
+                               </div>
                             </div>
                             <p class="message">{{message.text}}</p>
                             <p class="time">{{message.date}}</p>
