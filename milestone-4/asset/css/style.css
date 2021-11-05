@@ -29,7 +29,8 @@ body{
     flex-direction: column;
 }
 .chatSelected{
-    width: 65%;
+    width: calc((100% / 3) *2);
+    height: 100%;
     overflow-y: auto;
     background-image: url("/milestone-1/asset/img/mine.jpg");
 }
