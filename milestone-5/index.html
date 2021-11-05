@@ -86,7 +86,7 @@
                                 <i class="down  fas fa-chevron-down" @click='clickDown(message.id)'></i>
                                <div v-bind:id="'myDropdown'+ message.id" :class="message.status == 'received' ? 'infoReceived'  : 'infoSend'  ">
                                    <a class="info" href="#">info</a>
-                                   <a class="info" href="#">Delete message</a>
+                                   <a class="info" href="#" @click='deleteMessage()'>Delete message</a>
                                </div>
                             </div>
                             <p class="message">{{message.text}}</p>

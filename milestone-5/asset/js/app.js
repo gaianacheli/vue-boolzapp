@@ -134,6 +134,10 @@ const app = new Vue ({
                click.style.display ="none";  
             }   
         }
+        deleteMessage(){
+            
+
+        }
     },
     computed: {
         filterSearch (){
