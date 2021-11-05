@@ -81,15 +81,14 @@
                     <!--message-->
                     <div class="boxmessages">
                     <div class="messages" v-for="message in contacts[counter].messages">
-                        <div class="messageReceived" v-if="message.status == 'received'">
+                        <div :class="message.status == 'received' ? 'messageReceived' : 'messageEnvoy'">
+                            <div class="dropdown">
+                                <i class="down  fas fa-chevron-down"></i>
+                            </div>
                             <p class="message">{{message.text}}</p>
                             <p class="time">{{message.date}}</p>
                          </div>  
-                         <div class="messageEnvoy" v-else>
-                            <p class="message">{{message.text}}</p>
-                            <p class="time">{{message.date}}</p>
-                         
-                         </div>
+                    
                     </div>
                    </div>
                     
