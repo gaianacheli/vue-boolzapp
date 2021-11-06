@@ -133,10 +133,12 @@ const app = new Vue ({
             } else {  
                click.style.display ="none";  
             }   
-        }
-        deleteMessage(){
-            
-
+        },
+        deleteMessage(idmessaggio){
+            console.log(idmessaggio)
+            let index=this.contacts[this.counter].messages.findIndex(x=>x.id==idmessaggio)
+            console.log(index)
+            this.contacts[this.counter].messages.splice(index, 1);
         }
     },
     computed: {
